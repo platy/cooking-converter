@@ -12,7 +12,7 @@ input[type="radio"] {
     height: 16px;
   
     border: 2px solid #999;
-    /* transition: 0.2s all linear; */
+    transition: 0.2s all linear;
     margin-right: 5px;
   
     position: relative;
