@@ -1,0 +1,16 @@
+{
+  "name": "Cooking converter",
+  "short_name": "Cath",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#673ab8",
+  "icons": [
+    {
+      "src": "src/weight-balance.svg",
+      "type": "image/svg",
+      "sizes": "460x460"
+    }
+  ]
+}

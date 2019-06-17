@@ -1,6 +1,7 @@
 const path = require('path');
 const WebpackBar = require('webpackbar')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest')
 
 module.exports = {
   entry: './src/client.tsx',
@@ -34,5 +35,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Cath',
       filename: 'index.html',
-    }),]
+      meta: {
+        viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+        'mobile-web-app-capable': 'yes',
+      },
+    }),
+    new WebpackPwaManifest(require('./manifest.json'))
+  ]
 };
