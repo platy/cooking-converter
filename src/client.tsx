@@ -18,7 +18,7 @@ class ConverterApp extends Component<{}, AppState> {
         for (let unit in AllUnits) {
             inputUnits.push(
                 <li>
-                    <input id={"iunit-" + unit} value={unit} checked={unit === inputUnit} name="input-unit" type="radio" onChange={linkState(this, 'inputUnit', 'target.value')}>{unit}</input>
+                    <input id={"iunit-" + unit} value={unit} checked={unit === inputUnit} name="input-unit" type="radio" onChange={linkState(this, 'inputUnit', 'target.value')}></input>
                     <label for={"iunit-" + unit}>{unit}</label>
                 </li>)
         }
@@ -27,7 +27,7 @@ class ConverterApp extends Component<{}, AppState> {
         for (let stuff in AllStuffs) {
             stuffs.push(
                 <li>
-                    <input id={"stuff-" + stuff} value={stuff} checked={stuff === selectedStuff} name="input-stuff" type="radio" onChange={linkState(this, 'selectedStuff', 'target.value')}>{stuff}</input>
+                    <input id={"stuff-" + stuff} value={stuff} checked={stuff === selectedStuff} name="input-stuff" type="radio" onChange={linkState(this, 'selectedStuff', 'target.value')}></input>
                     <label for={"stuff-" + stuff}>{stuff}</label>
                 </li>
             )
