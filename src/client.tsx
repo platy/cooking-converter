@@ -2,6 +2,7 @@ import {h, render, Component} from 'preact'
 import { All as AllUnits } from './units'
 import { All as AllStuffs } from './DenseStuff'
 import linkState from 'linkstate'
+import './style.css'
 
 
 type AppState = {
@@ -50,7 +51,8 @@ class ConverterApp extends Component<{}, AppState> {
             }
         }
         return <section>
-            <input type="number" value={quantity} placeholder="enter quantity" autofocus={true} onInput={linkState(this, 'quantity')} />
+            <label for="quantity">Quantity</label>
+            <input id="quantity" type="number" value={quantity} placeholder="enter quantity" autofocus={true} onInput={linkState(this, 'quantity')} />
             <ul>{inputUnits}</ul>
             <p>
                 {quantity} {inputUnit} of:
