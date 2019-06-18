@@ -1,5 +1,7 @@
-import { Grams, OzInternational, Kilograms, Decilitres, Litres, FlOzUS } from '../src/units';
+import { All } from '../src/units';
 import { CasterSugar, SelfRaisingFlour } from '../src/DenseStuff';
+
+const {Grams, OzInternational, Kilograms, Decilitres, Litres, FlOzUS} = All
 
 describe('convert volume quanitites', () => {
     test('decilitres and litres', () => {
@@ -11,11 +13,11 @@ describe('convert volume quanitites', () => {
     })
 
     test('litres and fl ounzes', () => {
-        expect(FlOzUS(10).in(Litres).quantity).toBeCloseTo(0.2957353, 6)
+        expect(FlOzUS(10).in(Litres).quantity).toBeCloseTo(0.3, 6)
         expect(FlOzUS(10).in(Litres).unit).toBe(Litres)
 
-        expect(Litres(0.2957353).in(FlOzUS).quantity).toBeCloseTo(10)
-        expect(Litres(0.2957353).in(FlOzUS).unit).toBe(FlOzUS)
+        expect(Litres(0.3).in(FlOzUS).quantity).toBeCloseTo(10)
+        expect(Litres(0.3).in(FlOzUS).unit).toBe(FlOzUS)
     })
 })
 

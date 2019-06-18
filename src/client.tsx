@@ -1,5 +1,5 @@
 import {h, render, Component} from 'preact'
-import { All as AllUnits } from './units'
+import { All as AllUnits, TopInputs, TopOutputs, } from './units'
 import { All as AllStuffs } from './DenseStuff'
 import linkState from 'linkstate'
 import './style.css'
@@ -10,12 +10,22 @@ type AppState = {
     inputUnit?: string,
     outputUnit?: string,
     selectedStuff?: string,
+    inputUnitOptions: string[],
+    outputUnitOptions: string[],
 }
 
 class ConverterApp extends Component<{}, AppState> {
-    render({}, {quantity, inputUnit, selectedStuff = "Unspecified"}: AppState) {
+    constructor({}) {
+        super()
+        this.state = {
+            inputUnitOptions: Object.keys(TopInputs),
+            outputUnitOptions: Object.keys(TopOutputs),
+        }
+    }
+
+    render({}, {quantity, inputUnit, selectedStuff = "Unspecified", inputUnitOptions, outputUnitOptions, }: AppState) {
         let inputUnits = []
-        for (let unit in AllUnits) {
+        for (let unit of inputUnitOptions) {
             inputUnits.push(
                 <li>
                     <input id={"iunit-" + unit} value={unit} checked={unit === inputUnit} name="input-unit" type="radio" onChange={linkState(this, 'inputUnit', 'target.value')}></input>
@@ -41,7 +51,7 @@ class ConverterApp extends Component<{}, AppState> {
             let input = imeasure(quantity)
             let stuff = AllStuffs[selectedStuff]
 
-            for (let outputUnit in AllUnits) {
+            for (let outputUnit of outputUnitOptions) {
                 let omeasure = AllUnits[outputUnit]
                 result = input.of(stuff).in(omeasure).quantity
                 outputUnits.push(

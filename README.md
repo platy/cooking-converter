@@ -47,3 +47,10 @@ When the stuff is changed, the output units update to show the most likely units
 ## Output unit
 
 The output units shown will be based on the stuff chosen. If the user selects an output type then we add the mappings of input unit to stuff and stuff to output unit (input unit to output unit if stuff is not specified).
+
+# TODO
+
+Now i think I've put the most useful measures to me, I can see do some real testing and see if its useful
+Next I think what's needed is the option to search through the other units
+Then recording the selections used
+And Updating the top list to the most useful
