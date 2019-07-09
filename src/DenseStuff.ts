@@ -7,8 +7,9 @@ export const Salt = new DenseStuff(1200);
 export const Butter = new DenseStuff(900);
 export const CasterSugar = new DenseStuff(951.0194);
 export const SelfRaisingFlour = new DenseStuff(528.34);
+export const LongGrainWhiteRice = new DenseStuff(781.95);
 
 interface StuffMap {
     [key: string]: DenseStuff
 }
-export const All: StuffMap = {Unspecified, CasterSugar, SelfRaisingFlour, Water, Sugar, Salt, Butter,}
+export const All: StuffMap = {Unspecified, CasterSugar, SelfRaisingFlour, Water, Sugar, Salt, Butter, LongGrainWhiteRice,}

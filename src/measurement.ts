@@ -1,8 +1,8 @@
 export class DenseStuff {
     // in grams per litre
     density: number;
-    constructor(density: number) {
-        this.density = density;
+    constructor(density_grams_per_litre: number) {
+        this.density = density_grams_per_litre;
     }
 }
 

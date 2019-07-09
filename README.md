@@ -54,3 +54,7 @@ Now i think I've put the most useful measures to me, I can see do some real test
 Next I think what's needed is the option to search through the other units
 Then recording the selections used
 And Updating the top list to the most useful
+
+## other features
+
+We could add a fraction mode, to say you are making a half volume and everything should be cut in half
