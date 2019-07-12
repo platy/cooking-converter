@@ -55,17 +55,7 @@ spec:
         backend:
           serviceName: cath
           servicePort: 80
-  - host: cath.k1.njk.onl
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: cath
-          servicePort: 80
   tls:
   - hosts:
     - cath.njk.onl
     secretName: cath-cert
-  - hosts:
-    - cath.k1.njk.onl
-    secretName: cath-k1-cert
