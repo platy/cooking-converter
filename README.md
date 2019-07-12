@@ -58,3 +58,7 @@ And Updating the top list to the most useful
 ## other features
 
 We could add a fraction mode, to say you are making a half volume and everything should be cut in half
+
+# Deployment
+
+Use docker and k8s, build and tag and then apply the deployment.yaml with the updated tag version.

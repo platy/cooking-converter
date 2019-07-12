@@ -2,7 +2,7 @@
     "name": "cooking-converter",
     "version": "0.1.0",
     "scripts": {
-        "test": "nodemon -e ts -x jest",
+        "test": "jest",
         "dev": "webpack-dev-server --watch --config=webpack.config.js --mode=development",
         "build": "webpack --config=webpack.config.js --mode=production"
     },
