@@ -13,11 +13,14 @@ spec:
     spec:
       containers:
       - name: cath
-        image: rg.nl-ams.scw.cloud/njkonl/cath:0.1.0
+        image: rg.nl-ams.scw.cloud/njkonl/cath:0.1.1
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
+          requests:
+            memory: "80Mi"
+            cpu: "10m"
         ports:
         - containerPort: 80
       imagePullSecrets:
@@ -44,7 +47,6 @@ metadata:
   name: cath
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
-    certmanager.k8s.io/cluster-issuer: letsencrypt-production
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
